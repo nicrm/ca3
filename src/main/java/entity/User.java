@@ -3,6 +3,7 @@ package entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -17,7 +18,7 @@ public class User implements IUser, Serializable{
   @Id
   private String userName;
   
-  @ManyToMany
+  @ManyToMany(cascade={CascadeType.PERSIST})
   List<Role> roles;
  
   public User() {
