@@ -12,7 +12,6 @@ angular.module('myApp.view2', ['ngRoute'])
         .controller('View2Ctrl', function ($http, $scope) {
           $http({
             method: 'GET',
-            skipAuthentication: true,
             url: 'api/demouser'
           }).then(function successCallback(res) {
             $scope.data = res.data.message;

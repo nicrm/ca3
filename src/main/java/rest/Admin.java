@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("demoadmin")
-@RolesAllowed("Admin")
+//@RolesAllowed("Admin")
 public class Admin {
   
   @GET
